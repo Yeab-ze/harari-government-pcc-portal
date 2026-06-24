@@ -283,6 +283,48 @@ The portal's visual identity is rooted in Harari cultural heritage:
 
 ---
 
+
+## Security Considerations
+
+
+
+This is a demo / educational project. For production deployment, you should:
+
+
+
+1. **Change `SESSION_SECRET`** in `.env` to a strong random value
+
+2. **Use a real database** (PostgreSQL recommended) instead of SQLite
+
+3. **Store documents on object storage** (e.g., S3, OSS) instead of base64 in DB
+
+4. **Add rate limiting** on auth endpoints to prevent brute force
+
+5. **Add CAPTCHA** on registration
+
+6. **Set up email notifications** (the system currently uses in-app notifications only)
+
+7. **Add CSRF protection** if deploying without same-origin guarantees
+
+8. **Conduct a security audit** before handling real citizen data
+
+9. **Integrate with the actual ERCA TIN API** for real-time TIN verification
+
+10. **Add official digital signatures** (e.g., PAdES) to the issued PDF certificates
+
+
+
+---
+
+
+
+## License
+
+
+
+© 2026 Harari Region Trade, Industry & Tourism Development Bureau.
+
+Built for the Harari People Regional State, Ethiopia.
 ---
 
 *"Harar is the fourth holiest city of Islam, with 82 mosques within its walls, and has been a center of trade and learning for centuries. This portal continues that tradition in the digital age."*
